@@ -2,6 +2,8 @@
 
 A full-stack project that empowers citizens to report civic issues, get AI legal guidance, and gives admin users a focused portal for complaint management and analytics.
 
+**Live Demo:** [https://civic-issue-reporting-system-1-b6tg.onrender.com](https://civic-issue-reporting-system-1-b6tg.onrender.com)
+
 ---
 
 ## ✨ Features
