@@ -139,6 +139,40 @@ Open **http://localhost:5173** in your browser.
 
 ---
 
+## 🌐 Deployment (Render)
+
+The app is deployed on **Render** as a single web service — the Express server serves both the API and the built React frontend.
+
+| | |
+|---|---|
+| **Live URL** | [https://civic-issue-reporting-system-1-b6tg.onrender.com](https://civic-issue-reporting-system-1-b6tg.onrender.com) |
+| **Platform** | [Render](https://render.com) |
+| **Auto-deploy** | Pushes to `main` on GitHub trigger a new deploy |
+
+### Render settings
+
+| Setting | Value |
+|---------|-------|
+| **Root Directory** | `civic-issue-reporter` |
+| **Build Command** | `npm run install:all && npm run build` |
+| **Start Command** | `npm run start:server` |
+
+### Environment variables
+
+Set these in Render → **Environment**:
+
+| Variable | Required | Notes |
+|----------|----------|-------|
+| `JWT_SECRET` | Yes | Any long random string for login tokens |
+| `NODE_ENV` | Recommended | Set to `production` |
+| `OPENAI_API_KEY` | Optional | Only needed for real AI responses |
+
+PostgreSQL is optional — the app runs in mock/in-memory mode without a database.
+
+> **Note:** On Render's free tier, the app may take 30–60 seconds to wake up after inactivity (cold start).
+
+---
+
 ## 🔌 API Endpoints
 
 | Method | Endpoint | Description |
